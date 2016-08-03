@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   post 'signup',  to: 'users#create'
   resources :users
 
+
+  ## URL styles:
   # get 'static_pages/help'
   # get 'static_pages/home'
   # get 'static_pages/about'

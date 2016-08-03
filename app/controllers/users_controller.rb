@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 
   def create
   	@user = User.new(user_params)
-  	if @user.save # is no complete, yet.
+  	if @user.save # was no complete.
   		flash[:success] = "Welcome to this Tester APP!!!"
    		redirect_to @user
   	else
@@ -20,8 +20,8 @@ class UsersController < ApplicationController
 
   private
 
-  		def user_params
-  			params.require(:user).permit(:name, :email,
+  		def user_params #to avoid any user like admn
+        params.require(:user).permit(:name, :email,
   				:password, :password_confirmation)
   		end
 end

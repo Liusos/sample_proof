@@ -8,7 +8,7 @@
   <body>
     <%= render 'layouts/header' %>
     <div class="container">
-      <%flash.each do |message_type, message|%>
+      <%flash.each do |message_type, message|%>   <!--  flash method is handed like a hash -->
         <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
         <!-- <div class="alert alert-<%= message_type %>"><%= message %></div> -->
       <% end %>
